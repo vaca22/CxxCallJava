@@ -16,8 +16,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        stringFromJNI()
         // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
+       // binding.sampleText.text = stringFromJNI()
         fuck()
     }
 
@@ -40,5 +41,9 @@ class MainActivity : AppCompatActivity() {
         Log.e("fuck","fuckyou")
     }
 
+    public fun fuck(s:String){
+        Log.e("fuck","fuckyou223")
+        binding.sampleText.text=s
+    }
 
 }
