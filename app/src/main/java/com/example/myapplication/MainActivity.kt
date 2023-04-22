@@ -42,8 +42,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     public fun fuck(s:String){
-        Log.e("fuck","fuckyou223")
-        binding.sampleText.text=s
+        runOnUiThread {
+            Log.e("fuck","fuckyou223")
+            binding.sampleText.text=s
+        }
+
     }
 
 }
